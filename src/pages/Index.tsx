@@ -5,14 +5,19 @@ import { ServiceCard } from '@/components/ServiceCard';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles, Moon, Stars, Flame, Compass, Users, Calendar } from 'lucide-react';
 
+import tarotImage from '@/assets/services/tarot.png';
+import energyImage from '@/assets/services/energy.png';
+import ritualsImage from '@/assets/services/rituals.png';
+import runesImage from '@/assets/services/runes.png';
+
 const Index = () => {
   const { t } = useLanguage();
 
   const services = [
-    { icon: Sparkles, titleKey: 'services.tarot.title', descKey: 'services.tarot.description' },
-    { icon: Flame, titleKey: 'services.energy.title', descKey: 'services.energy.description' },
-    { icon: Moon, titleKey: 'services.rituals.title', descKey: 'services.rituals.description' },
-    { icon: Compass, titleKey: 'services.runes.title', descKey: 'services.runes.description' },
+    { icon: Sparkles, titleKey: 'services.tarot.title', descKey: 'services.tarot.description', image: tarotImage },
+    { icon: Flame, titleKey: 'services.energy.title', descKey: 'services.energy.description', image: energyImage },
+    { icon: Moon, titleKey: 'services.rituals.title', descKey: 'services.rituals.description', image: ritualsImage },
+    { icon: Compass, titleKey: 'services.runes.title', descKey: 'services.runes.description', image: runesImage },
   ];
 
   const stats = [
@@ -118,6 +123,7 @@ const Index = () => {
                 title={t(service.titleKey)}
                 description={t(service.descKey)}
                 delay={index * 100}
+                image={service.image}
               />
             ))}
           </div>
