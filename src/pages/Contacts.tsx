@@ -114,12 +114,18 @@ const Contacts = () => {
                 </div>
               </div>
 
-              {/* Map placeholder */}
-              <div className="aspect-video rounded-2xl bg-muted flex items-center justify-center border border-border">
-                <div className="text-center">
-                  <MapPin className="w-12 h-12 text-muted-foreground/50 mx-auto mb-2" />
-                  <p className="text-muted-foreground">Latvija, Rīga. Līzuma iela 1</p>
-                </div>
+              {/* Google Map */}
+              <div className="aspect-video rounded-2xl overflow-hidden border border-border">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2175.8934566974655!2d24.121789!3d56.9598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfd4a5c6c8c3%3A0x8c4e9b9b9c4b4f5c!2sL%C4%ABzuma%20iela%201%2C%20R%C4%ABga!5e0!3m2!1slv!2slv!4v1703000000000!5m2!1slv!2slv"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Līzuma iela 1, Rīga"
+                ></iframe>
               </div>
             </div>
           </div>
