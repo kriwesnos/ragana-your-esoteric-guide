@@ -86,26 +86,30 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-muted-foreground text-sm">
                 <Mail className="w-4 h-4 text-primary" />
-                <span>info@ragana.lv</span>
+                <span>ragana.ingrida@gmail.com</span>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground text-sm">
                 <Phone className="w-4 h-4 text-primary" />
-                <span>+371 20 000 000</span>
+                <span>+371 27 542 077</span>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground text-sm">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span>Rīga, Latvija</span>
+                <span>Latvija, Rīga. Līzuma iela 1</span>
               </li>
             </ul>
             <div className="flex gap-3 mt-4">
               <a
-                href="#"
+                href="https://instagram.com/ingrida_mystic"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
               >
                 <Instagram className="w-4 h-4 text-primary" />
               </a>
               <a
-                href="#"
+                href="https://facebook.com/ragana.lv"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
               >
                 <Facebook className="w-4 h-4 text-primary" />

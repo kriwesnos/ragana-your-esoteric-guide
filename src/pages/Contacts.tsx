@@ -10,19 +10,19 @@ const Contacts = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'info@ragana.lv',
-      href: 'mailto:info@ragana.lv',
+      value: 'ragana.ingrida@gmail.com',
+      href: 'mailto:ragana.ingrida@gmail.com',
     },
     {
       icon: Phone,
       label: language === 'ru' ? 'Телефон' : 'Tālrunis',
-      value: '+371 20 000 000',
-      href: 'tel:+37120000000',
+      value: '+371 27 542 077',
+      href: 'tel:+37127542077',
     },
     {
       icon: MapPin,
       label: language === 'ru' ? 'Адрес' : 'Adrese',
-      value: 'Rīga, Latvija',
+      value: 'Latvija, Rīga. Līzuma iela 1',
       href: '#',
     },
     {
@@ -96,13 +96,17 @@ const Contacts = () => {
                 </h3>
                 <div className="flex gap-4">
                   <a
-                    href="#"
+                    href="https://instagram.com/ingrida_mystic"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
                   >
                     <Instagram className="w-6 h-6 text-primary" />
                   </a>
                   <a
-                    href="#"
+                    href="https://facebook.com/ragana.lv"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
                   >
                     <Facebook className="w-6 h-6 text-primary" />
@@ -114,7 +118,7 @@ const Contacts = () => {
               <div className="aspect-video rounded-2xl bg-muted flex items-center justify-center border border-border">
                 <div className="text-center">
                   <MapPin className="w-12 h-12 text-muted-foreground/50 mx-auto mb-2" />
-                  <p className="text-muted-foreground">Rīga, Latvija</p>
+                  <p className="text-muted-foreground">Latvija, Rīga. Līzuma iela 1</p>
                 </div>
               </div>
             </div>
