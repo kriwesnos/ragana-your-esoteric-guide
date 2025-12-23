@@ -9,6 +9,7 @@ import tarotImage from '@/assets/services/tarot.png';
 import energyImage from '@/assets/services/energy.png';
 import ritualsImage from '@/assets/services/rituals.png';
 import runesImage from '@/assets/services/runes.png';
+import heroImage from '@/assets/hero-ingrida.jpg';
 
 const Index = () => {
   const { t } = useLanguage();
@@ -30,8 +31,17 @@ const Index = () => {
     <Layout>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <img 
+            src={heroImage} 
+            alt="Ingrida Mystic" 
+            className="w-full h-full object-cover object-top"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
         {/* Background decorations */}
-        <div className="absolute inset-0 bg-spiritual opacity-50" />
         <div className="absolute top-20 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-20 left-10 w-48 h-48 bg-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
         
