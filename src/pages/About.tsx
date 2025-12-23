@@ -1,6 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Layout } from '@/components/Layout';
 import { Users, Calendar, Stars, Sparkles } from 'lucide-react';
+import aboutHeroImage from '@/assets/about-hero.jpg';
 import aboutImage from '@/assets/about-ingrida.jpg';
 import sincerityImage from '@/assets/values/sincerity.jpg';
 import depthImage from '@/assets/values/depth.jpg';
@@ -26,16 +27,32 @@ const About = () => {
       {/* Hero */}
       <section className="py-20 bg-spiritual">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
-              <Sparkles className="w-10 h-10 text-primary" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+            {/* Image */}
+            <div className="relative order-2 lg:order-1">
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden max-w-sm mx-auto">
+                <img 
+                  src={aboutHeroImage} 
+                  alt="Ingrida" 
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/20 rounded-full blur-xl" />
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-xl" />
             </div>
-            <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-4">
-              {t('about.title')}
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              {t('about.subtitle')}
-            </p>
+            
+            {/* Text */}
+            <div className="text-center lg:text-left order-1 lg:order-2">
+              <div className="w-20 h-20 mx-auto lg:mx-0 mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+                <Sparkles className="w-10 h-10 text-primary" />
+              </div>
+              <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-4">
+                {t('about.title')}
+              </h1>
+              <p className="text-xl text-muted-foreground">
+                {t('about.subtitle')}
+              </p>
+            </div>
           </div>
         </div>
       </section>
