@@ -36,10 +36,10 @@ const Index = () => {
           <img 
             src={heroImage} 
             alt="Ingrida Mystic" 
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-contain md:object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
         </div>
         {/* Background decorations */}
         <div className="absolute top-20 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" />
