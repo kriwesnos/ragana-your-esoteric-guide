@@ -1,15 +1,18 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Layout } from '@/components/Layout';
-import { Heart, Eye, Sparkles, Users, Calendar, Stars } from 'lucide-react';
+import { Users, Calendar, Stars, Sparkles } from 'lucide-react';
 import aboutImage from '@/assets/about-ingrida.jpg';
+import sincerityImage from '@/assets/values/sincerity.jpg';
+import depthImage from '@/assets/values/depth.jpg';
+import transformationImage from '@/assets/values/transformation.jpg';
 
 const About = () => {
   const { t } = useLanguage();
 
   const values = [
-    { icon: Heart, title: 'ru' === 'ru' ? 'Искренность' : 'Sirsnība', desc: 'ru' === 'ru' ? 'Честный и открытый подход к каждому клиенту' : 'Godīga un atklāta pieeja katram klientam' },
-    { icon: Eye, title: 'ru' === 'ru' ? 'Глубина' : 'Dziļums', desc: 'ru' === 'ru' ? 'Глубокое понимание эзотерических практик' : 'Dziļa ezotērisko prakšu izpratne' },
-    { icon: Sparkles, title: 'ru' === 'ru' ? 'Трансформация' : 'Transformācija', desc: 'ru' === 'ru' ? 'Помогаем раскрыть ваш внутренний потенциал' : 'Palīdzam atklāt jūsu iekšējo potenciālu' },
+    { image: sincerityImage, title: 'ru' === 'ru' ? 'Искренность' : 'Sirsnība', desc: 'ru' === 'ru' ? 'Честный и открытый подход к каждому клиенту' : 'Godīga un atklāta pieeja katram klientam' },
+    { image: depthImage, title: 'ru' === 'ru' ? 'Глубина' : 'Dziļums', desc: 'ru' === 'ru' ? 'Глубокое понимание эзотерических практик' : 'Dziļa ezotērisko prakšu izpratne' },
+    { image: transformationImage, title: 'ru' === 'ru' ? 'Трансформация' : 'Transformācija', desc: 'ru' === 'ru' ? 'Помогаем раскрыть ваш внутренний потенциал' : 'Palīdzam atklāt jūsu iekšējo potenciālu' },
   ];
 
   const stats = [
@@ -99,8 +102,12 @@ const About = () => {
                 className="text-center p-8 rounded-2xl bg-background border border-border hover:border-primary/30 transition-colors animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
-                  <value.icon className="w-8 h-8 text-primary" />
+                <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden">
+                  <img 
+                    src={value.image} 
+                    alt={value.title} 
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
                   {value.title}
