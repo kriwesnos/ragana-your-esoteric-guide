@@ -8,12 +8,12 @@ import depthImage from '@/assets/values/depth.jpg';
 import transformationImage from '@/assets/values/transformation.jpg';
 
 const About = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const values = [
-    { image: sincerityImage, title: 'ru' === 'ru' ? 'Искренность' : 'Sirsnība', desc: 'ru' === 'ru' ? 'Честный и открытый подход к каждому клиенту' : 'Godīga un atklāta pieeja katram klientam' },
-    { image: depthImage, title: 'ru' === 'ru' ? 'Глубина' : 'Dziļums', desc: 'ru' === 'ru' ? 'Глубокое понимание эзотерических практик' : 'Dziļa ezotērisko prakšu izpratne' },
-    { image: transformationImage, title: 'ru' === 'ru' ? 'Трансформация' : 'Transformācija', desc: 'ru' === 'ru' ? 'Помогаем раскрыть ваш внутренний потенциал' : 'Palīdzam atklāt jūsu iekšējo potenciālu' },
+    { image: sincerityImage, title: language === 'ru' ? 'Искренность' : 'Sirsnība', desc: language === 'ru' ? 'Честный и открытый подход к каждому клиенту' : 'Godīga un atklāta pieeja katram klientam' },
+    { image: depthImage, title: language === 'ru' ? 'Глубина' : 'Dziļums', desc: language === 'ru' ? 'Глубокое понимание эзотерических практик' : 'Dziļa ezotērisko prakšu izpratne' },
+    { image: transformationImage, title: language === 'ru' ? 'Трансформация' : 'Transformācija', desc: language === 'ru' ? 'Помогаем раскрыть ваш внутренний потенциал' : 'Palīdzam atklāt jūsu iekšējo potenciālu' },
   ];
 
   const stats = [
